@@ -1,0 +1,59 @@
+@use 'variaveis';
+
+.event{
+    padding: 80px 0;
+    
+
+    &--frontend{
+        background-image: linear-gradient(rgb(151, 1, 251), #0092b7 );
+    }
+
+    &--backend{
+        background-image: linear-gradient(#0092b7, #175b6b);
+    }
+
+    &--left{
+        .container{
+            flex-direction: row-reverse;
+        }
+    }
+
+
+
+    .container{
+        display: flex;
+        gap: 40px;
+    }
+
+    img{
+        max-width: 360px;
+    }
+
+    &__description{
+        color: white;
+
+        &__title{
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 16px;
+        }
+
+        &__text{
+            line-height: 22px;
+        }
+    }
+
+    @media (max-width: 640px){
+        .container{
+            display: block;
+        }
+
+        img{
+            width: 100%;
+        }
+
+        &__description{
+            margin-bottom: 16px;
+        }
+    }
+}
